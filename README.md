@@ -34,3 +34,22 @@ print(constante)
 print(pi)
 
 ```
+
+## Tipos de dados
+
+```swift
+
+import UIKit
+
+let int = 2022 // Int -> inteiros
+let double = 8.1 // Double -> números decimais
+let string = "Alan" // String -> textos
+let isDeveloper = true // Bool -> true ou false
+
+// Tipando as variáveis
+let number: Int = 2021
+let pi: Double = 3.14
+let name: String = "Alan Alves"
+let no: Bool = false
+
+```
