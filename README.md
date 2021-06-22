@@ -139,6 +139,38 @@ var newProduct :String
 newProduct = company == "Google" ? "Android" : "iPhone"
 print(newProduct)
 
-
 ```
 
+## Tuplas
+
+```swift
+import UIKit
+
+let latitude: Double = 23.21
+// let coords: (Double, Double) = (23.4, 54.22)
+// print(coords.0)
+// print(coords.1)
+
+let coords = (lat: 23.4, lng: 54.22)
+
+print(coords.0)
+print(coords.1)
+
+print("lat:", coords.lat)
+print("lng:", coords.lng)
+
+let camera = (x: 10, y: 20, z: 1)
+
+// Caso queria ignorar algum eixo use o _
+// let (x, y, _) = camera
+let (x, y, z) = camera
+
+print(x)
+print(y)
+print(z)
+
+let user = (name: "Alan", age: 30)
+print(user.name)
+print(user.age)
+
+```
