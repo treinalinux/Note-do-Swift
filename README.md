@@ -53,3 +53,19 @@ let name: String = "Alan Alves"
 let no: Bool = false
 
 ```
+
+## Conversão de tipos de dados
+
+```swift
+import UIKit
+let x = 10
+let name = String(x)
+print(name)
+
+let y = "20"
+let vinte = Int(y)
+print(vinte)
+
+```
+
+
