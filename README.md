@@ -68,4 +68,38 @@ print(vinte)
 
 ```
 
+## Operadores
 
+```swift
+
+import UIKit
+
+// == , != , <, <= , > , >=
+let result = 4 != 3
+
+let x = 10
+let y = 10
+
+let res = x == y
+
+let firstName = "Alan"
+let lastName = "Alves"
+
+print(result)
+print(res)
+print(firstName == lastName)
+
+// ! && ||
+
+let isDriver = false
+let isStudent = true
+
+print(!isDriver)
+
+let ou = isDriver || isStudent
+print("|| -> Pelo menos um tem que ser verdadeiro:", ou)
+
+let e = isDriver && isStudent
+print("&& -> Os dois tem que ser verdadeiros:", e)
+
+```
