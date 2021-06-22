@@ -104,3 +104,41 @@ print("&& -> Os dois tem que ser verdadeiros:", e)
 
 
 ```
+
+## Condicionais e ternários
+
+```swift
+
+import UIKit
+
+let isHungry = true
+let isThirsty = true
+
+if !isHungry {
+    print("estou com fome")
+} else if !isThirsty{
+    print("estou com sede")
+} else {
+    print("estou satisfeito")
+}
+
+// Escopo
+
+var product: String
+let company = "Apple"
+if company == "Google" {
+    product = "Android"
+} else {
+    product = "iPhone"
+}
+print(product)
+
+// operador ternário
+// expressao ? valor-true : valor-false
+var newProduct :String
+newProduct = company == "Google" ? "Android" : "iPhone"
+print(newProduct)
+
+
+```
+
