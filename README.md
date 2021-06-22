@@ -174,3 +174,21 @@ print(user.name)
 print(user.age)
 
 ```
+
+## Arrays
+```swift
+import UIKit
+
+var userNames: [String] = []
+
+userNames.append("Alan")
+print(userNames)
+
+userNames.append("Carla")
+print(userNames)
+
+userNames += ["Pablo", "Rodrigo"]
+
+print(userNames)
+
+```
