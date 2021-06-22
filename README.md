@@ -102,4 +102,5 @@ print("|| -> Pelo menos um tem que ser verdadeiro:", ou)
 let e = isDriver && isStudent
 print("&& -> Os dois tem que ser verdadeiros:", e)
 
+
 ```
