@@ -268,3 +268,40 @@ repeat {
 
 
 ```
+
+## For
+
+```swift
+import UIKit
+
+let range = 0...5 // inlcuseve
+let newRange = 0..<5 // exlcuseve
+range
+newRange
+var limit = 5
+let rg = 0..<limit
+
+// for
+var sum = 0
+let count = 10
+
+for i in 1...count {
+    sum += i
+}
+print(sum)
+
+for _ in 1...count {
+    print("oi")
+}
+
+for _ in 1...count where count > 50 {
+    print("...")
+}
+
+// números pares
+for i in 1 ... count where i % 2 == 0 {
+    print("interpolação: \(i)")
+}
+
+
+```
