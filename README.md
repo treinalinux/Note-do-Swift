@@ -245,3 +245,26 @@ if let first = userNames.first {
 }
 
 ```
+
+## While e repet
+
+```swift
+import UIKit
+
+// while - primeiro checa e depois executa
+var i = 1
+
+while i <= 10 {
+    print("i -", i)
+    i += 1
+}
+
+// repet - primeiro executa e depois checa, é um do while em outras linguagens
+var j = 1
+repeat {
+    print("j -", j)
+    j += 1
+} while (j <= 10)
+
+
+```
