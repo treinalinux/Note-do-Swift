@@ -176,6 +176,7 @@ print(user.age)
 ```
 
 ## Arrays
+
 ```swift
 import UIKit
 
@@ -190,5 +191,57 @@ print(userNames)
 userNames += ["Pablo", "Rodrigo"]
 
 print(userNames)
+
+```
+
+## Modificadores de Arrays
+
+```swift
+import UIKit
+
+var userNames: [String] = []
+
+userNames.append("Alan")
+print(userNames)
+
+userNames.append("Carla")
+print(userNames)
+
+userNames += ["Pablo", "Rodrigo", "Sara", "Rebeca", "Jessica"]
+
+print(userNames)
+print("Total de elementos no array:", userNames.count)
+print("Carla está na lista?", userNames.contains("Carla"))
+
+// acesso por indice
+print(userNames[4])
+print("Do zero ao 3:", userNames[0...3])
+
+//
+userNames.insert("Jorge", at: 4)
+print("Jorge foi adicionado com sucesso no indice 4:", userNames)
+print(userNames)
+
+// Na ordem
+userNames.sort()
+print(userNames)
+
+// Remover elemontos do array
+userNames.removeLast()
+print("Ultimo elemento foi removido do array:",userNames)
+
+userNames.remove(at: 1)
+print("Elemento 1 foi removido do array:",userNames)
+
+userNames.removeAll()
+print("Sem elementos no array:",userNames)
+print("Sem elementos no array:",userNames.isEmpty)
+
+// condicionais
+if let first = userNames.first {
+    print(first)
+} else {
+    print("A lista não contém elementos")
+}
 
 ```
