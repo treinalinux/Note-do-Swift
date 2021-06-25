@@ -305,3 +305,54 @@ for i in 1 ... count where i % 2 == 0 {
 
 
 ```
+
+## Interpolation of String and caracter unicode
+
+```swift
+
+import UIKit
+// Interpolation of String and caracter unicode
+let name: String = "Fulano Ciclano"
+var age = 23
+var isDrunk = false
+var hasDocumeent = true
+
+if age >= 18 && hasDocumeent && !isDrunk {
+    print("\(name) pode digir \u{2665}")
+} else {
+    print("\(name) não pode dir  \u{264}")
+}
+// orther unicodes \u{1F469}
+
+var new_index_before = name[name.index(before: name.endIndex)]
+var new_index_after = name[name.index(after: name.startIndex)]
+var new_offsetby = name[name.index(name.startIndex, offsetBy: 2)]
+
+print(new_index_before)
+print(new_index_after)
+print(new_offsetby)
+print(name.last)
+
+// each line
+for index in name.indices {
+    print("\(name[index])")
+}
+
+// in line
+for index in name.indices {
+    print("\(name[index]) ", terminator: ""
+    )
+}
+
+print("\n")
+// var my_index = name.firstIndex(of: " ")!
+var full_name = "Ciclano Beltrano de Fulano"
+
+var last_index = full_name.lastIndex(of: " ")
+print("\(full_name[..<last_index!])")
+
+var words = full_name.split(separator: " ")
+print("\(words[0])")
+
+
+```
