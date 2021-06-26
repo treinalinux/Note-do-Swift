@@ -392,3 +392,80 @@ student.name = "Carla"
 print(student.showFullName())
 
 ```
+
+## Working inheritance
+
+```swift
+import UIKit
+
+// Working inheritance
+class Venhicle {
+    var name: String
+    var brand: String
+
+    init (name: String, brand: String) {
+        self.name = name
+        self.brand = brand
+    }
+
+    func showDescription() -> String {
+        return "\(self.name) \(self.brand)"
+    }
+}
+
+var gol = Venhicle(name: "Gol", brand: "Volkswagen")
+print("Result of class dad Venhicle:")
+print(gol.showDescription())
+
+// class Car inherit ":" of Venhicle
+class Car : Venhicle {
+    var isEletric: Bool
+    var gears: Int
+
+    init(name: String, brand: String, isEletric: Bool, gears: Int) {
+        self.isEletric = isEletric
+        self.gears = gears
+        // super only after propreties current
+        super.init(name: name, brand: brand)
+    }
+
+    override func showDescription() -> String {
+        // operator ternary ... ? "A" : "B"
+        let eletric: String = self.isEletric ? "Yes" : "No"
+        return "\(self.name) \(self.brand) has \(gears) gears. This car is eletric \(eletric)"
+    }
+}
+
+var uno = Car(name: "Uno", brand: "Fiat", isEletric: false, gears: 4)
+print("\nResult of class son Car:")
+print(uno.showDescription())
+
+class Train : Venhicle {
+    var numberOfPassengers: Int
+    init(name: String, brand: String, numberOfPassengers: Int) {
+        self.numberOfPassengers = numberOfPassengers
+        super.init(name: name, brand: brand)
+    }
+    override func showDescription() -> String {
+        return "This train has capacity for \(self.numberOfPassengers) people"
+    }
+}
+
+var train = Train(name: "Rio - São Paulo", brand: "Empresa Corp", numberOfPassengers: 200)
+print("\n")
+print(train.showDescription())
+
+var venhicles: [Venhicle] = [gol, uno, train]
+
+print("\n")
+
+for venhicle in venhicles {
+    if venhicle is Car {
+        print("\(venhicle) - I want to buy this car")
+    } else {
+        print("\(venhicle) - I don't have money")
+    }
+}
+
+
+```
