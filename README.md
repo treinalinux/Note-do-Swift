@@ -356,3 +356,39 @@ print("\(words[0])")
 
 
 ```
+
+## OO
+
+### class
+
+```swift
+import UIKit
+
+// Set class User
+class User {
+    // var not initialize or no value
+    var name : String
+    var lastName : String
+
+    // Method constuctor
+    init(name: String, lastName: String) {
+        self.name = name
+        self.lastName = lastName
+    }
+
+    // method showFullName return (->) String
+    func showFullName() -> String {
+        return "\(self.name) \(self.lastName)"
+    }
+
+}
+
+// object instance
+var student = User(name: "Alan", lastName: "Alves")
+print(student.showFullName())
+
+// Change value
+student.name = "Carla"
+print(student.showFullName())
+
+```
