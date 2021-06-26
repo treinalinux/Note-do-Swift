@@ -469,3 +469,29 @@ for venhicle in venhicles {
 
 
 ```
+
+
+## More examples
+
+```swift
+import UIKit
+
+class Customer {
+    var name: String
+    var age: Int
+    // var car: String?
+    var car: String = "Not informed"
+    
+    init(name: String, age: Int) {
+        self.name = name
+        self.age = age
+    }
+}
+
+var newCurstomer = Customer(name: "Alan", age: 30)
+
+print("Nome:\t", newCurstomer.name)
+print("Idade:\t", newCurstomer.age)
+print("Carro:\t", newCurstomer.car)
+
+```
